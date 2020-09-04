@@ -1,0 +1,168 @@
+@import 'https://fonts.googleapis.com/css?family=Montserrat:300, 400, 700&display=swap';
+
+*{
+	padding: 0;
+	margin: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #fca800;
+	
+
+}
+
+.container{
+    width: 80%;
+    padding: 20px;
+}
+
+.container h2{
+    width: 100%;
+    color: #fff;
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+
+/* THE GRID TEMPLATE COLUMNS AUTO FIT IS MAKING IT FIT TO WHATEVER SCREEN SIZE WE WANT */
+.container .row100{
+    position: relative;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+
+}
+
+.container .row100 .col{
+    position: relative;
+    width: 100%;
+    padding: 0 10px;
+    margin: 30px 0 10px;
+    transition: 1.8s ease-in-out;
+}
+
+/*  */
+.container .row100 .inputBox{
+    position: relative;
+    width: 100%;
+    height: 40px;
+    color: #fff;
+}
+
+.container .row100 .inputBox input
+/* .container .row100 .inputBox.textarea textarea */
+{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    box-shadow: none;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    padding: 0 10px;
+    z-index: 1;
+    color: #000;
+}
+
+.container .row100 .inputBox .text{
+    position: absolute;
+    top: 0;
+    left: 0;
+    line-height: 40px;
+    font-size: 18px;
+    padding: 0 10px;
+    display: block;
+    transition: 1.8s ease-in-out;
+    pointer-events: none;
+    
+}
+
+/* THE TEXT DESCRIPTION ANIMATION */
+.container .row100 .inputBox input:focus + .text,
+.container .row100 .inputBox input:valid + .text
+{
+    top: -35PX;
+    left: -10PX;
+}
+
+.container .row100 .inputBox .line{
+    position: absolute;
+    bottom: 0;
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: #fff;
+    transition: 1.8s ease-in-out;
+    border-radius: 2px;
+    pointer-events: none;
+}
+
+
+/* GIVING THE TEXT LINE HEIGHT */
+.container .row100 .inputBox input:focus ~ .line,
+.container .row100 .inputBox input:valid ~ .line
+{
+    height: 100%;
+}
+
+/* TEXT AREA STYLING */
+
+.container .row100 .inputBox.textarea{
+    position: relative;
+    width: 100%;
+    height: 100px;
+    padding: 10px 0;
+}
+
+.container .row100 .inputBox.textarea textarea{
+    height: 100%;
+    resize: none;
+}
+
+.container .row100 .inputBox.textarea textarea{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    box-shadow: none;
+    border: none;
+    outline: none;
+    outline: none;
+    font-size: 18px;
+    padding: 0 10px;
+    z-index: 1;
+    color: #000;
+}
+
+
+/* TEXT AREA ANIMATION */
+.container .row100 .inputBox textarea:focus + .text,
+.container .row100 .inputBox textarea:valid + .text
+{
+    top: -35PX;
+    left: -10PX;
+}
+
+.container .row100 .inputBox textarea:focus ~ .line,
+.container .row100 .inputBox textarea:valid ~ .line
+{
+    height: 100%;
+}
+
+input[type="submit"]{
+    border: none;
+    padding: 7px 35px;
+    cursor: pointer;
+    outline: none;
+    background: #fff;
+    font-size: 18px;
+    border-radius: 2px;
+}
